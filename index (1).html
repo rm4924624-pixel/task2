@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ألوان وخطوط وتصميم المواقع باستخدام CSS</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.9; color: #172554; background: #f5f7ff;
+    }
+    header {
+      color: white; text-align: center; padding: 34px 18px;
+      background: linear-gradient(120deg, #1d4ed8, #6d28d9);
+    }
+    header h1 { margin: 0 0 10px; font-size: clamp(24px, 4vw, 38px); }
+    header p { margin: 4px 0; }
+    main { width: min(1100px, 94%); margin: 28px auto; }
+    section, .image-panel {
+      background: white; padding: 22px; margin: 18px 0;
+      border-radius: 14px; box-shadow: 0 4px 18px #1e3a8a12;
+    }
+    h2 { color: #4338ca; border-bottom: 2px solid #ddd6fe; padding-bottom: 8px; }
+    h3 { color: #1d4ed8; }
+    .hero-image { display: block; width: min(100%, 760px); height: auto;
+      margin: 12px auto; border-radius: 12px; }
+    .topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+    .topic { background: #eef2ff; padding: 14px; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; background: white; }
+    th, td { border: 1px solid #a5b4fc; padding: 10px; text-align: center; }
+    th { background: #e0e7ff; }
+    a { color: #1d4ed8; }
+    footer { text-align: center; padding: 18px; background: #172554; color: white; margin-top: 30px; }
+    @media (max-width: 600px) {
+      main { width: 96%; }
+      section { padding: 15px; }
+      th, td { padding: 7px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ألوان وخطوط وتصميم المواقع باستخدام CSS</h1>
+    <p><strong>اسم الطالبة:</strong> سحر محمد الحسيني عبدالرازق ابوراشد</p>
+    <p><strong>الرقم الجامعي:</strong> 2500452</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>مقدمة عن CSS</h2>
+      <p>
+        تُعد لغة CSS من أهم التقنيات المستخدمة في تصميم صفحات ومواقع الويب.
+        وCSS هي اختصار لعبارة Cascading Style Sheets، أي أوراق الأنماط المتتالية.
+        تعمل CSS مع HTML؛ حيث يهتم HTML بإنشاء محتوى الصفحة وعناصرها، بينما تهتم
+        CSS بتحديد الشكل الذي تظهر به هذه العناصر للمستخدم.
+      </p>
+      <p>
+        تسمح CSS للمصمم بالتحكم في الألوان والخطوط وأحجام العناصر والمسافات
+        والحدود وترتيب مكونات الصفحة، مما يساعد على إنشاء مواقع واضحة وجذابة وسهلة الاستخدام.
+      </p>
+      <img class="hero-image" src="css-design.png" alt="رسم توضيحي عن تصميم المواقع باستخدام CSS">
+    </section>
+
+    <section>
+      <h2>عرض الموضوع</h2>
+      <div class="topics">
+        <article class="topic">
+          <h3>أولاً: تغيير ألوان المواقع</h3>
+          <p>تُستخدم الخاصية <strong>color</strong> لتحديد لون النص، بينما تُستخدم
+          <strong>background-color</strong> لتحديد لون خلفية العنصر. ويمكن تحديد الألوان
+          بأسمائها أو بالأكواد السداسية أو باستخدام قيم RGB.</p>
+        </article>
+        <article class="topic">
+          <h3>ثانياً: تغيير الخطوط والنصوص</h3>
+          <p>تحدد <strong>font-family</strong> نوع الخط، و<strong>font-size</strong>
+          حجمه، و<strong>font-weight</strong> سمكه. كما تتحكم خصائص مثل
+          <strong>text-align</strong> و<strong>line-height</strong> في المحاذاة والمسافة بين السطور.</p>
+        </article>
+        <article class="topic">
+          <h3>ثالثاً: تنسيق العناصر</h3>
+          <p>تحدد <strong>width</strong> و<strong>height</strong> العرض والارتفاع،
+          وتتحكم <strong>margin</strong> في المسافات خارج العنصر، بينما تتحكم
+          <strong>padding</strong> في المسافات داخله، ويمكن إضافة الحدود باستخدام <strong>border</strong>.</p>
+        </article>
+        <article class="topic">
+          <h3>رابعاً: تصميم وترتيب صفحات المواقع</h3>
+          <p>تساعد <strong>Flexbox</strong> على ترتيب العناصر في صف أو عمود والتحكم
+          في المسافات بينها، بينما تساعد <strong>CSS Grid</strong> على إنشاء تخطيطات
+          تعتمد على الصفوف والأعمدة.</p>
+        </article>
+        <article class="topic">
+          <h3>خامساً: جعل التصميم مناسباً للموبايل</h3>
+          <p>تسمح <strong>Media Queries</strong> بتغيير خصائص التصميم حسب حجم الشاشة،
+          وبذلك يظهر الموقع بصورة مناسبة على الكمبيوتر والهاتف والتابلت. ويُعرف ذلك
+          باسم <strong>Responsive Design</strong>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>جدول يوضح بعض خصائص CSS</h2>
+      <table>
+        <tr><th>الخاصية</th><th>الاستخدام</th></tr>
+        <tr><td>color</td><td>تحديد لون النص</td></tr>
+        <tr><td>background-color</td><td>تحديد لون الخلفية</td></tr>
+        <tr><td>font-family</td><td>اختيار نوع الخط</td></tr>
+        <tr><td>font-size</td><td>تحديد حجم الخط</td></tr>
+        <tr><td>margin</td><td>التحكم في المسافات خارج العنصر</td></tr>
+        <tr><td>padding</td><td>التحكم في المسافات داخل العنصر</td></tr>
+        <tr><td>display: flex</td><td>ترتيب العناصر باستخدام Flexbox</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>الخاتمة</h2>
+      <p>
+        في النهاية، تُعتبر CSS جزءاً أساسياً من تصميم مواقع الويب؛ لأنها تمنح صفحات
+        HTML الشكل والتنسيق المناسب. فمن خلالها يمكن تغيير ألوان النصوص والخلفيات،
+        واختيار أنواع وأحجام الخطوط، والتحكم في المسافات والحدود وأحجام العناصر،
+        بالإضافة إلى ترتيب مكونات الصفحة بطريقة منظمة.
+      </p>
+      <p>
+        كما تساعد CSS في إنشاء تصميمات متجاوبة تعمل بصورة جيدة على الأجهزة المختلفة.
+        لذلك فإن تعلم خصائص CSS يمثل خطوة مهمة لكل من يريد تعلم تصميم المواقع.
+      </p>
+    </section>
+
+    <section>
+      <h2>المصادر والمراجع</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs - CSS</a></li>
+        <li><a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C - Cascading Style Sheets</a></li>
+        <li><a href="https://web.dev/learn/css/" target="_blank" rel="noopener">web.dev - Learn CSS</a></li>
+        <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools - CSS Tutorial</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>جميع الحقوق محفوظة © 2026</footer>
+</body>
+</html>
